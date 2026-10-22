@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AeroCast | Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div class="brand">
+                <div class="brand-icon">A</div>
+
+                <div>
+                    <h1>AeroCast</h1>
+                    <p>SMART WEATHER DASHBOARD</p>
+                </div>
+            </div>
+
+
+            <button
+                id="unitToggle"
+                class="unit-btn">
+                °C
+            </button>
+
+        </header>
+
+
+        <!-- SEARCH -->
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Search for a city..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+
+            <div
+                id="recentSearches"
+                class="recent-searches">
+            </div>
+
+        </section>
+
+
+        <!-- LOADING -->
+        <div
+            id="loading"
+            class="loading hidden">
+
+            <div class="loader"></div>
+
+            <p>
+                Fetching weather data...
+            </p>
+
+        </div>
+
+
+        <!-- ERROR -->
+        <div
+            id="error"
+            class="error hidden">
+
+            <h3>
+                Unable to find that location
+            </h3>
+
+            <p>
+                Check the city name and try again.
+            </p>
+
+        </div>
+
+
+        <!-- WEATHER CONTENT -->
+        <section
+            id="weatherContent"
+            class="weather-content hidden">
+
+
+            <!-- CURRENT WEATHER -->
+            <div class="current-weather card">
+
+                <div class="location">
+
+                    <span class="location-icon">
+                        📍
+                    </span>
+
+                    <div>
+
+                        <h2 id="cityName">
+                            Thrissur
+                        </h2>
+
+                        <p id="countryName">
+                            India
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="current-main">
+
+                    <div
+                        id="weatherIcon"
+                        class="weather-icon">
+                        ☀️
+                    </div>
+
+
+                    <div>
+
+                        <div class="temperature">
+
+                            <strong id="temperature">
+                                --°
+                            </strong>
+
+                            <span>
+                                C
+                            </span>
+
+                        </div>
+
+
+                        <p
+                            id="weatherDescription"
+                            class="weather-description">
+                            --
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <p class="feels">
+
+                    Feels like
+                    <strong id="feelsLike">
+                        --°
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+            <!-- WEATHER STATS -->
+            <div class="stats-grid">
+
+                <div class="stat card">
+
+                    <span class="stat-icon">
+                        💧
+                    </span>
+
+                    <div>
+
+                        <p>
+                            Humidity
+                        </p>
+
+                        <strong id="humidity">
+                            --%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat card">
+
+                    <span class="stat-icon">
+                        💨
+                    </span>
+
+                    <div>
+
+                        <p>
+                            Wind Speed
+                        </p>
+
+                        <strong id="wind">
+                            -- km/h
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat card">
+
+                    <span class="stat-icon">
+                        🌡️
+                    </span>
+
+                    <div>
+
+                        <p>
+                            Pressure
+                        </p>
+
+                        <strong id="pressure">
+                            -- hPa
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat card">
+
+                    <span class="stat-icon">
+                        👁️
+                    </span>
+
+                    <div>
+
+                        <p>
+                            Visibility
+                        </p>
+
+                        <strong id="visibility">
+                            -- km
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORECAST -->
+            <div class="forecast-section">
+
+                <div class="section-title">
+
+                    <p>
+                        WEATHER OUTLOOK
+                    </p>
+
+                    <h2>
+                        5-Day Forecast
+                    </h2>
+
+                </div>
+
+
+                <div
+                    id="forecast"
+                    class="forecast-grid">
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- WELCOME -->
+        <section
+            id="welcome"
+            class="welcome">
+
+            <div class="welcome-icon">
+                ☁️
+            </div>
+
+            <h2>
+                Explore the weather
+            </h2>
+
+            <p>
+                Search for any city to see
+                current conditions and forecasts.
+            </p>
+
+        </section>
+
+
+        <footer>
+
+            AeroCast v1.0
+            <span>•</span>
+            Built with HTML, CSS & JavaScript
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
